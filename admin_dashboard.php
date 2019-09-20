@@ -28,12 +28,24 @@ $result = $connect->query($sql_request);
 					"<div class='col-12 col-md-6 col-lg-4 p-3'>
 						<div class='col-border'>
 							<img class='img-fluid img-thumbnail' src=".$row['image'].">
-							<h4>".$row['name']."</h4>
-							<p>".$row['event_when']."</p>
-							<div class='text-container d-none d-md-block'>
-								<p>".$row['location']."</p>
-							</div>
-						</div>	
+							<p class='post-text post-title'>Title: ".$row['name']."</p>
+							<span class='post-text'>Web: </span><a class='post-text post-link' href='".$row['homepage']."'target='_blank'>".$row['homepage']."</a>";
+					if ($row['event_when'] != NULL){
+						echo "<p class='post-text'>Date/Time: ".$row['event_when']."</p>
+							<p class='post-text'> Ticket price: ".$row['price']."</p>";
+					}
+					if ($row['type'] != NULL) {
+						echo "<p class='post-text'>Type: ".$row['type']."</p>";
+					}
+					echo 	
+					"<p class='d-none d-md-block post-text'>Address: ".$row['location']."</p>";
+					if ($row['phone'] != NULL) {
+						echo "<p class='post-text'>Phone: ".$row['phone']."</p>";
+					}
+					if ($row['description'] != NULL) {
+						echo "<p class='post-text'>About: ".$row['description']."</p>";
+					}	
+					echo "</div>	
 					</div>";
 				} 
 			} else {
