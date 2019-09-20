@@ -1,8 +1,9 @@
-/*
-* ==========================================
+/*==========================================
 * Custom CSS
-* ==========================================
-*/
+==========================================*/
+.login-cred {
+  margin-top: 10rem;
+}
 
 .nav-text-color {
   color: #599fd9 !important;
@@ -38,7 +39,7 @@
 #page-content {
 	background: green;
   width: calc(100% - 17rem); 
-  height: 100vh;
+  height: calc(100vh - 3.3rem);
   margin-top: 3.3rem;  
 	margin-left: 17rem;
   overflow-y: auto;

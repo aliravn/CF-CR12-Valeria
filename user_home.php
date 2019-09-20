@@ -2,7 +2,7 @@
 	up to here is home.php with session check, <body> and user/admin switch 
 *****************************************************************************-->
 
-
+<?php include "admin_topnav.php"; ?>
 
 <div class="login-cred">
 	<div class="login-name">

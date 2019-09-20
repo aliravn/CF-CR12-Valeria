@@ -26,7 +26,7 @@
 <?php 
 if ($user_details['userpriv']==1){
 	include "admin_dashboard.php";
-} else { 
+} else {
 	include "user_home.php";
 } 
 ?>
