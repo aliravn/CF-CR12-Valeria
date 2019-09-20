@@ -20,7 +20,7 @@ if(!isset($_SESSION['user'])) {
 		<li class="nav-item">
 			<a href="home.php" class="nav-link text-dark font-italic bg-light">
 				<i class="fa fa-th-large sidebar-link fa-fw"></i>
-				Home
+				Home / All posts
 			</a>
 		</li>
 		<li class="nav-item">
