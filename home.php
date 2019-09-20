@@ -75,7 +75,7 @@ $result = $connect->query($sql_posts);
 </div>
 
 <?php 
-if ($user_details['userpriv']==1){
+if ($user_details['userpriv']==1) {
 	include "admin_sidebar.php";
 } else {
 	include "user_sidebar.php";
