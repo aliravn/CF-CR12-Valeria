@@ -36,13 +36,13 @@
 			</a>
 		</li>
 		<li class="nav-item">
-			<a href="sarahmaps.php" class="nav-link text-dark font-italic">
+			<a href="#" class="nav-link text-dark font-italic">
 				<i class="fa fa-map sidebar-link fa-fw"></i>
 				Maps
 			</a>
 		</li>
 		<li class="nav-item">
-			<a href="sarahmaps.php" class="nav-link text-dark font-italic">
+			<a href="#" class="nav-link text-dark font-italic">
 				<i class="fa fa-users sidebar-link fa-fw"></i>
 				Manage users
 			</a>

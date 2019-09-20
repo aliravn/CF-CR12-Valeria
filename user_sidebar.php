@@ -57,17 +57,5 @@ if(!isset($_SESSION['user'])) {
 				Change password
 			</a>
 		</li>
-		<li class="nav-item">
-			<a href="#" class="nav-link text-dark font-italic">
-				<i class="fa fa-address-card sidebar-link fa-fw"></i>
-				TBA
-			</a>
-		</li>
-		<li class="nav-item">
-			<a href="#" class="nav-link text-dark font-italic">
-				<i class="fa fa-address-card sidebar-link fa-fw"></i>
-				TBA
-			</a>
-		</li>
 	</ul>
 </div>
