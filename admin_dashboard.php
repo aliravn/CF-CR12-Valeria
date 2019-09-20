@@ -26,7 +26,7 @@ var_dump($result);
 			if($result->num_rows > 0) {
 				while($row = $result->fetch_assoc()) {
 					echo 
-					"<div class='col-12 col-md-6 col-lg-3 p-2'>
+					"<div class='col-12 col-md-6 col-lg-4 p-3'>
 						<div class='col-border'>
 							<img class='img-fluid img-thumbnail' src=".$row['image'].">
 							<h4>".$row['name']."</h4>

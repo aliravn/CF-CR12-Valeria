@@ -33,7 +33,7 @@
 }
 
 #page-content {
-	background: #599fd9;
+	background: #4e565e;
   width: calc(100% - 13rem); 
   height: calc(100vh - 3.3rem);
   margin-top: 3.3rem;  
@@ -51,17 +51,20 @@
 .col-border {
   height: 100%;
   border: .5vw solid #70f17c;
-  border-radius: 1vw 3vw;
+  border-radius: 0 3vw;
   padding: .7rem;
+  box-shadow: 3px 3px 3px black, -3px -3px 3px black;
 }
 
 .img-thumbnail {
   border-radius: 0.5vw 2vw;
   background-color: #61605d;
-  box-shadow: 2px 2px 3px white, -2px -2px 3px white; }
-
-
-
+  box-shadow: 2px 2px 3px black, -2px -2px 3px black; }
+/* 
+.container-fluid {
+  margin: 0 1rem 5rem;
+}
+ */
 
 
 
