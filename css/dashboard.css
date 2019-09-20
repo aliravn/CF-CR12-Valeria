@@ -47,6 +47,26 @@
   width: 40rem;
   height: 30rem;
 }
+
+.col-border {
+  height: 100%;
+  border: .5vw solid #70f17c;
+  border-radius: 1vw 3vw;
+  padding: .7rem;
+}
+
+.img-thumbnail {
+  border-radius: 0.5vw 2vw;
+  background-color: #61605d;
+  box-shadow: 2px 2px 3px white, -2px -2px 3px white; }
+
+
+
+
+
+
+
+
 /* for toggle behavior */
 
 /* #sidebar.active {

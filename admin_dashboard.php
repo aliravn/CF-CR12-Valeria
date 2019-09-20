@@ -18,7 +18,8 @@ var_dump($result);
 <?php include "admin_topnav.php"; ?>
 
 <!-- PAGE CONTENT section -->
-<div id="page-content"> 
+<div id="page-content">
+	<h3>RECENT POSTS</h3>
 	<div class="container-fluid">
 		<div class="row">
 			<?php 
