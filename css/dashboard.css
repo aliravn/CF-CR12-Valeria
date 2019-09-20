@@ -30,7 +30,7 @@
 /*   transition: all 0.4s; */
 }
 
-#page-content {
+.page-content {
 	background: #95bcf0;
   width: calc(100% - 13rem); 
   height: 100vh;
