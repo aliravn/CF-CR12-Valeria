@@ -120,7 +120,7 @@ $(document).ready(function(){
 	$('#username').keyup(function(){
 		var username_to_check = $(this).val();
 		$.ajax({
-			url:'_username_check.php',
+			url:'username_check.php',
 			method:"POST",
 			data:{username_match:username_to_check},
 			success:function(data) {
