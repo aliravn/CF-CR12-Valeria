@@ -1,16 +1,18 @@
 <?php
-	ob_start();
-	session_start();
-	require_once 'db_connect.php';
+session_start();
+if(!isset($_SESSION['user'])) {
+	header("Location: index.php");
+	exit;
+}
 
-	if(!isset($_SESSION['user'])) {
-		header("Location: index.php");
-		exit;
-	}
+require_once 'db_connect.php';
 
-	$sql_request = "SELECT * FROM users WHERE userID=".$_SESSION['user'];
-	$result = $connect->query($sql_request);
-	$user_details = mysqli_fetch_array($result, MYSQLI_ASSOC);
+$sql_user = "SELECT * FROM users WHERE userID=".$_SESSION['user'];
+$result = $connect->query($sql_user);
+$user_details = mysqli_fetch_array($result, MYSQLI_ASSOC);
+
+$sql_posts = "SELECT posts.*, concat(address, ' ', city, ' ', zipcode, ' ', country) as location FROM posts JOIN locations ON fk_location = locationID ORDER BY created";
+$result = $connect->query($sql_posts);
 ?>
 
 <!DOCTYPE html>
@@ -23,11 +25,60 @@
 </head>
 
 <body>
+
+<!-- TOP-NAVBAR section -->
+<?php include "admin_topnav.php"; ?>
+
+<!-- PAGE CONTENT section -->
+<div class="page-content">
+	<div class="container-fluid">
+		<div class="row">
+			<?php 
+			if($result->num_rows > 0) {
+				while($row = $result->fetch_assoc()) {
+					echo 
+					"<div class='col-12 col-md-6 col-lg-4 p-3'>
+						<div class='col-border'>
+							<img class='img-fluid img-thumbnail' src=".$row['image'].">";
+					if ($user_details['userpriv']==1){
+						echo "<div class='button-container'>
+						<a class='' href='p_update.php?id=" .$row['postID']."'><button class='manipulate-button' type='button'>Edit</button></a>
+						<a class='' href='p_delete.php?id=" .$row['postID']."'><button class='manipulate-button' type='button'>Delete</button></a>
+						</div>";
+					}	
+					echo "<p class='post-text post-title'>Title: ".$row['name']."</p>
+							<span class='post-text'>Web: </span><a class='post-text post-link' href='".$row['homepage']."'target='_blank'>".$row['homepage']."</a>";
+					if ($row['event_when'] != NULL){
+						echo "<p class='post-text'>Date/Time: ".$row['event_when']."</p>
+							<p class='post-text'> Ticket price: ".$row['price']."</p>";
+					}
+					if ($row['type'] != NULL) {
+						echo "<p class='post-text'>Type: ".$row['type']."</p>";
+					}
+					echo 	
+					"<p class='d-none d-md-block post-text'>Address: ".$row['location']."</p>";
+					if ($row['phone'] != NULL) {
+						echo "<p class='post-text'>Phone: ".$row['phone']."</p>";
+					}
+					if ($row['description'] != NULL) {
+						echo "<p class='post-text'>About: ".$row['description']."</p>";
+					}	
+					echo "</div>	
+					</div>";
+				} 
+			} else {
+				echo "No Data Avaliable";
+			}	
+			?>
+		</div>
+	</div>
+</div>
+
 <?php 
 if ($user_details['userpriv']==1){
-	include "admin_dashboard.php";
+	include "admin_sidebar.php";
 } else {
-	include "user_home.php";
+	include "user_sidebar.php";
 } 
 ?>
 
