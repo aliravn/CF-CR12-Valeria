@@ -24,14 +24,14 @@ if(!isset($_SESSION['user'])) {
 			</a>
 		</li>
 		<li class="nav-item">
-			<a href="#" class="nav-link text-dark font-italic">
-				<i class="fa fa-address-card sidebar-link fa-fw"></i>
+			<a href="restaurant.php" class="nav-link text-dark font-italic">
+				<i class="fa fa-cutlery sidebar-link fa-fw"></i>
 				Restaurants
 			</a>
 		</li>
 		<li class="nav-item">
 			<a href="#" class="nav-link text-dark font-italic">
-				<i class="fa fa-cubes sidebar-link fa-fw"></i>
+				<i class="fa fa-music sidebar-link fa-fw"></i>
 				Events
 			</a>
 		</li>
@@ -53,7 +53,7 @@ if(!isset($_SESSION['user'])) {
 		</li>
 		<li class="nav-item">
 			<a href="#" class="nav-link text-dark font-italic">
-				<i class="fa fa-key sidebar-link fa-fw"></i>
+				<i class="fa fa-unlock-alt sidebar-link fa-fw"></i>
 				Change password
 			</a>
 		</li>
