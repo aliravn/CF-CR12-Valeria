@@ -7,8 +7,13 @@
 		exit;
 	}
 ?>
+
 <!-- TOP-NAVBAR section -->
 <?php include "admin_topnav.php"; ?>
+
+<!-- PAGE CONTENT section -->
+<div id="page-content"> </div>
+
 
 <!-- SIDE-NAVBAR section -->
 <?php include "user_sidebar.php"; ?>

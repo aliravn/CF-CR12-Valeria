@@ -1,8 +1,8 @@
-<?php 
-	if(!isset($_SESSION['user'])) {
-		header("Location: index.php");
-		exit;
-	}
+<?php
+if(!isset($_SESSION['user'])) {
+	header("Location: index.php");
+	exit;
+}
 ?>
 
 <div class="vertical-nav bg-white" id="sidebar">
