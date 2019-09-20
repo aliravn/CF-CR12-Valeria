@@ -5,10 +5,10 @@ require_once 'db_connect.php';
 
 // it will never let you open index(login) page if session is set
 // !!!!CHANGE LOCATION FOR HOME.php admin/user
-// if (isset($_SESSION['user'])!="") {
-// 	header("Location: dashboard.php");
-// 	exit;
-// }
+if (isset($_SESSION['user'])!="") {
+	header("Location: dashboard.php");
+	exit;
+}
 
 $error = false;
 
