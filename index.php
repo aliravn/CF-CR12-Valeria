@@ -6,7 +6,7 @@ require_once 'db_connect.php';
 // it will never let you open index(login) page if session is set
 // !!!!CHANGE LOCATION FOR HOME.php admin/user
 if (isset($_SESSION['user'])!="") {
-	header("Location: dashboard.php");
+	header("Location: home.php");
 	exit;
 }
 
@@ -45,7 +45,7 @@ if(isset($_POST['btn-login'])) {
 
 		if ($count == 1 && $result['userpass']==$password) {
 			$_SESSION['user'] = $result['userID'];
-			header("Location: dashboard.php");
+			header("Location: home.php");
 		} else {
 			$errMSG = "Email and Password don't match. Please try again..." ;
 		}

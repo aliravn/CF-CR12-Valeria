@@ -4,7 +4,7 @@ session_start();
 
 // !!!!CHANGE LOCATION FOR HOME.php admin/user
 if(isset($_SESSION['user'])!="") { //if the user is loged in (user not empty)
-	header("Location: dashboard.php"); // it redirects to home.php
+	header("Location: home.php"); // it redirects to home.php
 }
 
 include_once 'db_connect.php';
