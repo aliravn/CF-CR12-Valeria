@@ -15,7 +15,7 @@
 		</div>
 	</div>
 
-<!-- 	<p class="text-gray font-weight-bold text-uppercase px-3 small pb-2 mb-0">Page Controls</p> -->
+	<p class="text-gray font-weight-bold text-uppercase px-3 mb-0 small">Navigation</p>
 	<ul class="nav flex-column bg-white mb-0">
 		<li class="nav-item">
 			<a href="home.php" class="nav-link text-dark font-italic bg-light">
@@ -41,6 +41,7 @@
 				Maps
 			</a>
 		</li>
+		<p class="text-gray font-weight-bold text-uppercase px-3 mt-3 mb-0 small">Admin tools</p>
 		<li class="nav-item">
 			<a href="#" class="nav-link text-dark font-italic">
 				<i class="fa fa-users sidebar-link fa-fw"></i>
@@ -53,10 +54,6 @@
 				Add new post
 			</a>
 		</li>			
-	</ul>
-<!-- 
-	<p class="text-gray font-weight-bold text-uppercase px-3 small pt-4 py-2 mb-0">User controls</p> -->
-	<ul class="nav flex-column bg-white mb-0">
 		<li class="nav-item">
 			<a href="#" class="nav-link text-dark font-italic">
 				<i class="fa fa-user-circle-o sidebar-link fa-fw"></i>
