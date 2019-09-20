@@ -7,7 +7,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top py-0">
 <!-- 	<abbr title="Take me home, please =^.^="> -->
-	<a class="navbar-brand" href="dashboard_ex.php">
+	<a class="navbar-brand" href="home.php">
 		<img class="img-fluid d-block" width="100" src="img/logoCodingCat1.png" alt="">
 	</a>
 	<span class="nav-text-color nav-text-font mr-auto">Collecting impressions...</span>
