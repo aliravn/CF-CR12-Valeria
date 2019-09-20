@@ -43,7 +43,7 @@ $result = $connect->query($sql_posts);
 					if ($user_details['userpriv']==1){
 						echo "<div class='button-container'>
 						<a class='' href='p_update.php?id=" .$row['postID']."'><button class='manipulate-button' type='button'>Edit</button></a>
-						<a class='' href='p_delete.php?id=" .$row['postID']."'><button class='manipulate-button' type='button'>Delete</button></a>
+						<a class='' href='a_delete.php?id=" .$row['postID']."'><button class='manipulate-button' type='button'>Delete</button></a>
 						</div>";
 					}	
 					echo "<p class='post-text post-title'>Title: ".$row['name']."</p>
