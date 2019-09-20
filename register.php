@@ -2,9 +2,10 @@
 ob_start();
 session_start();
 
-if(isset($_SESSION['user'])!="") { //if the user is loged in (user not empty)
-	header("Location: dashboard.php"); // it redirects to home.php
-}
+// !!!!CHANGE LOCATION FOR HOME.php admin/user
+// if(isset($_SESSION['user'])!="") { //if the user is loged in (user not empty)
+// 	header("Location: dashboard.php"); // it redirects to home.php
+// }
 
 include_once 'db_connect.php';
 $error = false;
@@ -119,7 +120,7 @@ $(document).ready(function(){
 	$('#username').keyup(function(){
 		var username_to_check = $(this).val();
 		$.ajax({
-			url:'username_check.php',
+			url:'_username_check.php',
 			method:"POST",
 			data:{username_match:username_to_check},
 			success:function(data) {
@@ -137,7 +138,4 @@ $(document).ready(function(){
 	});
 });
 </script>
-
-
-
 <?php  ob_end_flush(); ?>
