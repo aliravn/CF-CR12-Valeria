@@ -28,6 +28,10 @@ $result = $connect->query($sql_request);
 					"<div class='col-12 col-md-6 col-lg-4 p-3'>
 						<div class='col-border'>
 							<img class='img-fluid img-thumbnail' src=".$row['image'].">
+							<div class='button-container'>
+						<a class='' href='p_update.php?id=" .$row['postID']."'><button class='manipulate-button' type='button'>Edit</button></a>
+						<a class='' href='p_delete.php?id=" .$row['postID']."'><button class='manipulate-button' type='button'>Delete</button></a>
+						</div>
 							<p class='post-text post-title'>Title: ".$row['name']."</p>
 							<span class='post-text'>Web: </span><a class='post-text post-link' href='".$row['homepage']."'target='_blank'>".$row['homepage']."</a>";
 					if ($row['event_when'] != NULL){

@@ -17,6 +17,7 @@
 }
 
 .vertical-nav {
+  background: #6e92c2;  
   max-width: 13rem;
   position: absolute;
   top: 0;
@@ -53,7 +54,7 @@
   background: #6e92c2;
   height: 100%;
   border: .5vw solid #1968d4;
-  border-radius: 0 3vw;
+/*   border-radius: 0 3vw; */
   padding: .7rem;
   box-shadow: 3px 3px 3px black, -3px -3px 3px black;
 }
@@ -79,8 +80,16 @@
   font-size: .7rem;  
 }
 
+.button-container {
+  text-align: center;
+  margin-top: .5rem;
+}
 
-
+.manipulate-button {
+  border-radius: 3px;
+  border: 3px solid #1968d4;
+  background: #6e92c2;
+}
 /* for toggle behavior */
 
 /* #sidebar.active {
