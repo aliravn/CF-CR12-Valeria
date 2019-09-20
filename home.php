@@ -3,14 +3,14 @@
 	session_start();
 	require_once 'db_connect.php';
 
-	if( !isset($_SESSION[ 'user' ]) ) {
+	if(!isset($_SESSION['user'])) {
 		header("Location: index.php");
 		exit;
 	}
 
-	$result_sql_user = mysqli_query($connect, "SELECT * FROM users WHERE userID=".$_SESSION['user']);
-	$user_details = mysqli_fetch_array($result_sql_user, MYSQLI_ASSOC);
-	// var_dump($userRow);
+	$sql_request = "SELECT * FROM users WHERE userID=".$_SESSION['user'];
+	$result = $connect->query($sql_request);
+	$user_details = mysqli_fetch_array($result, MYSQLI_ASSOC);
 ?>
 
 <!DOCTYPE html>
