@@ -16,6 +16,9 @@ $result = $connect->query($sql_request);
 <!-- TOP-NAVBAR section -->
 <?php include "admin_topnav.php"; ?>
 
+<!-- SIDE-NAVBAR section -->
+<?php include "admin_sidebar.php"; ?>
+
 <!-- PAGE CONTENT section -->
 <div id="page-content">
 <!-- 	<h3>RECENT POSTS</h3> -->
@@ -62,5 +65,3 @@ $result = $connect->query($sql_request);
 
 </div>
 
-<!-- SIDE-NAVBAR section -->
-<?php include "admin_sidebar.php"; ?>
