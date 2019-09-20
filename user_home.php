@@ -7,7 +7,8 @@
 		exit;
 	}
 ?>
-
+<!-- TOP-NAVBAR section -->
 <?php include "admin_topnav.php"; ?>
 
+<!-- SIDE-NAVBAR section -->
 <?php include "user_sidebar.php"; ?>

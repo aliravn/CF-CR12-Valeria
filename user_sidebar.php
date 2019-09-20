@@ -14,11 +14,11 @@
 			</div>
 		</div>
 	</div>
-<!-- 
-	<p class="text-gray font-weight-bold text-uppercase px-3 small pb-2 mb-0">Page Controls</p>
+
+	<p class="text-gray font-weight-bold text-uppercase px-3 small pb-2 mb-0">Navigation</p>
 	<ul class="nav flex-column bg-white mb-0">
 		<li class="nav-item">
-			<a href="dashboard.php" class="nav-link text-dark font-italic bg-light">
+			<a href="home.php" class="nav-link text-dark font-italic bg-light">
 				<i class="fa fa-th-large sidebar-link fa-fw"></i>
 				Home
 			</a>
@@ -26,13 +26,13 @@
 		<li class="nav-item">
 			<a href="#" class="nav-link text-dark font-italic">
 				<i class="fa fa-address-card sidebar-link fa-fw"></i>
-				About
+				Restaurants
 			</a>
 		</li>
 		<li class="nav-item">
 			<a href="#" class="nav-link text-dark font-italic">
 				<i class="fa fa-cubes sidebar-link fa-fw"></i>
-				Services
+				Events
 			</a>
 		</li>
 		<li class="nav-item">
@@ -41,14 +41,8 @@
 				Maps
 			</a>
 		</li>
-		<li class="nav-item">
-			<a href="sarahmaps.php" class="nav-link text-dark font-italic">
-				<i class="fa fa-users sidebar-link fa-fw"></i>
-				Manage users
-			</a>
-		</li>		
 	</ul>
- -->
+
 	<p class="text-gray font-weight-bold text-uppercase px-3 small pt-4 py-2 mb-0">User controls</p>
 	<ul class="nav flex-column bg-white mb-0">
 		<li class="nav-item">
