@@ -42,6 +42,10 @@
   color: white;
 }
 
+#page-content h3 {
+  margin: 0;
+}
+
 #map {
   margin: 5rem auto 0;
   width: 40rem;

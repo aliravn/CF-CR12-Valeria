@@ -11,7 +11,6 @@ if(!isset($_SESSION['user'])) {
 // WHERE poi_type = 'event'
 $sql_request = "SELECT posts.*, concat(address, ' ', city, ' ', zipcode, ' ', country) as location FROM posts JOIN locations ON fk_location = locationID ORDER BY created";
 $result = $connect->query($sql_request);
-var_dump($result);
 ?>
 
 <!-- TOP-NAVBAR section -->
@@ -19,7 +18,7 @@ var_dump($result);
 
 <!-- PAGE CONTENT section -->
 <div id="page-content">
-	<h3>RECENT POSTS</h3>
+<!-- 	<h3>RECENT POSTS</h3> -->
 	<div class="container-fluid">
 		<div class="row">
 			<?php 
