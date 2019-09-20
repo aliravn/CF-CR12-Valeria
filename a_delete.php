@@ -12,7 +12,7 @@ $sql_user = "SELECT * FROM users WHERE userID=".$_SESSION['user'];
 $result = $connect->query($sql_user);
 $user_details = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
-if ($_SESSION['user'] == 1 && $_GET['id']) {
+if ($user_details['userpriv']==1 && $_GET['id']) {
 	$id = $_GET['id'];
 	$sql_delete = "DELETE FROM posts WHERE postID = '$id'" ;
 
@@ -20,7 +20,7 @@ if ($_SESSION['user'] == 1 && $_GET['id']) {
 		header("Location: home.php");
 		exit;
 	}
-} else if ($_SESSION['user'] != 1) {
+} else if ($user_details['userpriv'] != 1) {
 	echo "you have no rights to perform this action";
 } else {
 	echo "Error while updating record : ". $connect->error;
