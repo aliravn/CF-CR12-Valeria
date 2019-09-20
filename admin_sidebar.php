@@ -46,7 +46,13 @@
 				<i class="fa fa-users sidebar-link fa-fw"></i>
 				Manage users
 			</a>
-		</li>		
+		</li>
+		<li class="nav-item">
+			<a href="add.php" class="nav-link text-dark font-italic">
+				<i class="fa fa-pencil sidebar-link fa-fw"></i>
+				Add new post
+			</a>
+		</li>			
 	</ul>
 <!-- 
 	<p class="text-gray font-weight-bold text-uppercase px-3 small pt-4 py-2 mb-0">User controls</p> -->

@@ -38,7 +38,7 @@
         </form> -->
 		<ul class="navbar-nav">
 			<li class="nav-item">
-				<a href="logout.php?logout" class="nav-link nav-text-color">Logout<i class="fa fa-sign-out sidebar-link fa-fw"></i></a>
+				<a href="logout.php?logout" class="nav-link nav-logout-color">Logout<i class="fa fa-sign-out nav-logout-color fa-fw"></i></a>
 			</li>
 		</ul>
 	</div>

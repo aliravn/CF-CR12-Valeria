@@ -3,6 +3,11 @@
   font-weight: bold;
 }
 
+.nav-logout-color {
+  color: #f21b1b !important;
+  font-weight: bold;
+}
+
 .nav-text-font {
   font-size: .9rem;
 }
