@@ -1,22 +1,20 @@
-<?php
-/********************* TOP-NAVBAR starts here ***************************/
-include "admin_topnav.php";
-/********************* TOP-NAVBAR ends here *****************************/
-?>
+<!--*************************************************************************
+	up to here is home.php with session check, <body> and user/admin switch 
+*****************************************************************************-->
+
+
+<!-- TOP-NAVBAR section -->
+<?php include "admin_topnav.php"; ?>
+
+<!-- PAGE CONTENT section -->
 
 <div id="page-content">
 
-<div id="map"></div>
-
 </div>
 
-<?php
 
-/********************* SIDE NAVBAR starts here ***************************/
-include "admin_sidebar.php";
-/********************* SIDE NAVBAR ends here *****************************/
-
-?>
+<!-- SIDE-NAVBAR section -->
+<?php include "admin_sidebar.php"; ?>
 
 
 
