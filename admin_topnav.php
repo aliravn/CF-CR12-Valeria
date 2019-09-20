@@ -1,4 +1,10 @@
-<!-- Horizontal navbar -->
+<?php 
+	if(!isset($_SESSION['user'])) {
+		header("Location: index.php");
+		exit;
+	}
+?>
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top py-0">
 <!-- 	<abbr title="Take me home, please =^.^="> -->
 	<a class="navbar-brand" href="dashboard_ex.php">
@@ -19,10 +25,10 @@
 			<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle nav-text-color" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">DROPDOWN</a>
 				<div class="dropdown-menu thumbnail-color" aria-labelledby="navbarDropdown">
-					<a class="dropdown-item" href="#">Travels</a>
-					<a class="dropdown-item" href="#">Personal</a>
+					<a class="dropdown-item" href="#">TBA</a>
+					<a class="dropdown-item" href="#">TBA</a>
 				<div class="dropdown-divider"></div>
-				<a class="dropdown-item" href="#">Art</a>
+				<a class="dropdown-item" href="#">TBA</a>
 			</div>
 			</li>
 		</ul>

@@ -1,4 +1,10 @@
-<!-- Vertical navbar -->
+<?php 
+	if(!isset($_SESSION['user'])) {
+		header("Location: index.php");
+		exit;
+	}
+?>
+
 <div class="vertical-nav bg-white" id="sidebar">
 	<div class="py-4 px-3 mb-4 bg-light">
 		<div class="media d-flex align-items-center"><img src="<?php echo $user_details['userpic']; ?>" alt="..." width="65" class="mr-3 rounded img-thumbnail sidebar-thumbnail-color shadow-sm">
@@ -12,7 +18,7 @@
 	<p class="text-gray font-weight-bold text-uppercase px-3 small pb-2 mb-0">Page Controls</p>
 	<ul class="nav flex-column bg-white mb-0">
 		<li class="nav-item">
-			<a href="dashboard.php" class="nav-link text-dark font-italic bg-light">
+			<a href="home.php" class="nav-link text-dark font-italic bg-light">
 				<i class="fa fa-th-large sidebar-link fa-fw"></i>
 				Home
 			</a>
@@ -71,4 +77,3 @@
 		</li>
 	</ul>
 </div>
-<!-- End vertical navbar -->
