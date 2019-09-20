@@ -1,10 +1,6 @@
 /*==========================================
 * Custom CSS
 ==========================================*/
-.login-cred {
-  margin-top: 10rem;
-}
-
 .nav-text-color {
   color: #599fd9 !important;
   font-weight: bold;
@@ -24,12 +20,12 @@
 }
 
 .vertical-nav {
-  min-width: 17rem;
+  max-width: 13rem;
   position: absolute;
   top: 0;
   left: 0;
   padding-top: 3.3em;
-  width: 17rem;
+  width: 13rem;
   height: 100vh;
   left: 0;
   box-shadow: 5px 3px 10px rgba(0, 0, 0, 0.1);
@@ -37,11 +33,11 @@
 }
 
 #page-content {
-	background: green;
-  width: calc(100% - 17rem); 
+	background: #599fd9;
+  width: calc(100% - 13rem); 
   height: calc(100vh - 3.3rem);
   margin-top: 3.3rem;  
-	margin-left: 17rem;
+	margin-left: 13rem;
   overflow-y: auto;
   color: white;
 }
