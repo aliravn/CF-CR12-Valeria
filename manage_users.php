@@ -45,6 +45,8 @@ $connect->close();
 		<button class="btn btn-success" id="add-user-button" type="button">Add user</button>
 	</a>
 
+
+
 	<table  border="1" cellspacing= "0" cellpadding="0" class="table">
 		<thead>
 			<tr>
@@ -52,7 +54,6 @@ $connect->close();
 				<th>userID</th>
 				<th>username</th>
 				<th>useremail</th>
-				<th>userpass</th>
 				<th>userpic</th>
 				<th>regdate</th>
 				<th>userpriv</th>
@@ -70,8 +71,7 @@ $connect->close();
 						<td>" .$row['userID']."</td>
 						<td>" .$row['username']."</td>
 						<td>" .$row['useremail']."</td>
-						<td>" .$row['userpass']."</td>
-						<td><img class='img-thumbnail img-fluid' width='100' src=" .$row['userpic']." alt='some image'/></td>
+						<td>" .$row['userpic']."</td>
 						<td>" .$row['regdate']."</td>
 						<td>" .$row['userpriv']."</td>
 						<td class='manipulate-button-container'>
