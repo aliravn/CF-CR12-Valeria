@@ -94,6 +94,17 @@
   border: 3px solid #1968d4;
   background: #6e92c2;
 }
+
+.create-location {
+  width: 20rem;
+  margin: 1rem 1rem 0;
+/*   border: 3px solid #1968d4; */
+  padding: .5rem;
+}
+
+.create-page {
+  display: flex;
+}
 /* for toggle behavior */
 
 /* #sidebar.active {

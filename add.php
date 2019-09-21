@@ -10,7 +10,6 @@ require_once 'db_connect.php';
 $sql_user = "SELECT * FROM users WHERE userID=".$_SESSION['user'];
 $result = $connect->query($sql_user);
 $user_details = mysqli_fetch_array($result, MYSQLI_ASSOC);
-var_dump($_SESSION['user']);
 ?>
 
 <!DOCTYPE html>
@@ -33,8 +32,8 @@ if ($user_details['userpriv'] == 1) {
 include "admin_topnav.php";
 
 echo 
-'<div class="page-content">
-	<div class="create-page">
+'<div class="page-content create-page">
+	<div class="create-location">
 		<h3>Add Location</h3>
 		<form action="a_create.php"  method="post">
 			<div class="form-group">
@@ -60,6 +59,32 @@ echo
 			</div>
 		</form>
 	</div>
+	<div class="create-location">
+		<h3>Add Location</h3>
+		<form action="a_create.php"  method="post">
+			<div class="form-group">
+				<span>ZIP</span>
+				<input class="form-control" type= "text" name= "zipcode" placeholder="ZIPcode / PLZ"/>
+			</div>
+			<div class="form-group">
+				<span>Country</span>
+				<input class="form-control" type= "text" name="country" placeholder="country"/>
+			</div>
+			<div class="form-group">
+				<span>City</span>
+				<input class="form-control" type="text" name="city" placeholder="City" />
+			</div>
+			<div class="form-group">
+				<span>Address</span>
+				<input class="form-control" type ="text" name= "address" placeholder="street, house no" />
+			</div>
+		
+			<div class="create-button-container">
+				<a href= "home.php"><button class="back-button" type="button">Back</button></a>
+				<button type="submit">Save</button>
+			</div>
+		</form>
+	</div>	
 </div>';
 
 include "admin_sidebar.php";
