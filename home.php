@@ -11,7 +11,7 @@ $sql_user = "SELECT * FROM users WHERE userID=".$_SESSION['user'];
 $result = $connect->query($sql_user);
 $user_details = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
-$sql_posts = "SELECT posts.*, concat(address, ' ', city, ' ', zipcode, ' ', country) as location FROM posts JOIN locations ON fk_location = locationID ORDER BY created";
+$sql_posts = "SELECT posts.*, concat(address, ' ', city, ' ', zipcode, ' ', country) as location FROM posts JOIN locations ON fk_location = locationID ORDER BY created DESC";
 $result = $connect->query($sql_posts);
 ?>
 
@@ -47,6 +47,7 @@ $result = $connect->query($sql_posts);
 						</div>";
 					}	
 					echo "<p class='post-text post-title'>Title: ".$row['name']."</p>
+							<p class='post-text'>Created on: ".$row['created']."</p>
 							<span class='post-text'>Web: </span><a class='post-text post-link' href='".$row['homepage']."'target='_blank'>".$row['homepage']."</a>";
 					if ($row['event_when'] != NULL){
 						echo "<p class='post-text'>Date/Time: ".$row['event_when']."</p>
