@@ -46,15 +46,15 @@ $connect->close();
 <div class="page-content">
 	<div class="create-location create-post">
 		<h3>Update User</h3>
-		<form action="a_user_update.php"  method="post">
+		<form action="a_update_user.php"  method="post">
 			<div class="form-group">
 				<span>ID:</span>
-				<input class="form-control" type= "text" name= "postID" value="<?php echo $data['userID']; ?>" />
+				<input class="form-control" type= "text" name= "userID" value="<?php echo $data['userID']; ?>" />
 			</div>			
 			
 			<div class="form-group">
-				<span>Title:</span>
-				<input class="form-control" type= "text" name= "name" value="<?php echo $data['username']; ?>" />
+				<span>Username:</span>
+				<input class="form-control" type= "text" name= "username" value="<?php echo $data['username']; ?>" />
 			</div>
 			<div class="form-group">
 				<span>Email:</span>
@@ -62,7 +62,7 @@ $connect->close();
 			</div>				
 			<div class="form-group">
 				<span>Password:</span>
-				<input class="form-control" type= "text" name= "useremail" value="<?php echo $data['userpass']; ?>" />
+				<input class="form-control" type= "text" name= "userpass" value="<?php echo $data['userpass']; ?>" />
 			</div>						
 			<div class="form-group">
 				<span>Userpic:</span>
