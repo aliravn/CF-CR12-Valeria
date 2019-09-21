@@ -38,7 +38,7 @@
 		<li class="nav-item">
 			<a href="map.php" class="nav-link text-dark font-italic">
 				<i class="fa fa-map sidebar-link fa-fw"></i>
-				Maps [n/a]
+				Maps
 			</a>
 		</li>
 		<p class="text-gray font-weight-bold text-uppercase px-3 mt-3 mb-0 small">Admin tools</p>
