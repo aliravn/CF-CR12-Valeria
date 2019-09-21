@@ -49,7 +49,7 @@
 			</a>
 		</li>
 		<li class="nav-item">
-			<a href="add.php" class="nav-link text-dark font-italic">
+			<a href="create.php" class="nav-link text-dark font-italic">
 				<i class="fa fa-pencil sidebar-link fa-fw"></i>
 				Add new post
 			</a>
