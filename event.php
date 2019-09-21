@@ -32,6 +32,7 @@ $connect->close();
 <?php include "admin_topnav.php"; ?>
 
 
+<!-- SIDE-NAVBAR section -->
 <?php 
 if ($user_details['userpriv']==1){
 	include "admin_sidebar.php";
@@ -85,18 +86,6 @@ if ($user_details['userpriv']==1){
 		</div>
 	</div>
 </div>
-
-</div>
-
-<!-- SIDE-NAVBAR section -->
-<?php 
-if ($user_details['userpriv']==1){
-	include "admin_sidebar.php";
-} else {
-	include "user_sidebar.php";
-} 
-?>
-
 
 
 <!-- ********************** JavaScript starts here **********************-->
