@@ -45,7 +45,7 @@
 		<li class="nav-item">
 			<a href="manage_users.php" class="nav-link text-dark font-italic">
 				<i class="fa fa-users sidebar-link fa-fw"></i>
-				Manage users [n/a]
+				Manage users [i/pr]
 			</a>
 		</li>
 		<li class="nav-item">
