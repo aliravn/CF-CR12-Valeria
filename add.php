@@ -10,6 +10,16 @@ require_once 'db_connect.php';
 $sql_user = "SELECT * FROM users WHERE userID=".$_SESSION['user'];
 $result = $connect->query($sql_user);
 $user_details = mysqli_fetch_array($result, MYSQLI_ASSOC);
+
+$sql_location = "SELECT * FROM locations";
+$result = $connect->query($sql_location); 
+$location_list = [];
+if($result->num_rows > 0) {
+	while($row = $result->fetch_assoc()) {
+		$location_list[$row['locationID']] = $row['address'].', '.$row['city'].', '.$row['zipcode'].', '.$row['country'];
+	}
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +44,7 @@ include "admin_topnav.php";
 echo 
 '<div class="page-content create-page">
 	<div class="create-location">
-		<h3>Add Location</h3>
+		<h3>Add new location</h3>
 		<form action="a_create.php"  method="post">
 			<div class="form-group">
 				<span>ZIP</span>
@@ -58,27 +68,65 @@ echo
 				<button type="submit">Save</button>
 			</div>
 		</form>
-	</div>
-	<div class="create-location">
-		<h3>Add Location</h3>
+	</div>';
+
+	echo 
+	'<div class="create-location">
+		<h3>Add new post</h3>
 		<form action="a_create.php"  method="post">
+			<div class="form-group">
+				<span>Title:</span>
+				<input class="form-control" type= "text" name= "name" placeholder="name of place/event/rest"/>
+			</div>
+			<div class="form-group">
+				<span>Where it was</span>
+				<select class="form-control" name="fk_location">';
+					foreach($location_list as $locationID=>$full_address) {
+                        echo "<option value=$locationID>$full_address</option>";
+					}
+			echo '
+				</select>
+			</div>
+			<div class="form-group">
+				<span>Teaser image</span>
+				<input class="form-control" type= "URL" name= "image" placeholder="ZIPcode / PLZ"/>
+			</div>						
 			<div class="form-group">
 				<span>ZIP</span>
 				<input class="form-control" type= "text" name= "zipcode" placeholder="ZIPcode / PLZ"/>
 			</div>
 			<div class="form-group">
-				<span>Country</span>
-				<input class="form-control" type= "text" name="country" placeholder="country"/>
+				<span>ZIP</span>
+				<input class="form-control" type= "text" name= "zipcode" placeholder="ZIPcode / PLZ"/>
 			</div>
 			<div class="form-group">
-				<span>City</span>
-				<input class="form-control" type="text" name="city" placeholder="City" />
+				<span>ZIP</span>
+				<input class="form-control" type= "text" name= "zipcode" placeholder="ZIPcode / PLZ"/>
 			</div>
 			<div class="form-group">
-				<span>Address</span>
-				<input class="form-control" type ="text" name= "address" placeholder="street, house no" />
+				<span>ZIP</span>
+				<input class="form-control" type= "text" name= "zipcode" placeholder="ZIPcode / PLZ"/>
 			</div>
-		
+			<div class="form-group">
+				<span>ZIP</span>
+				<input class="form-control" type= "text" name= "zipcode" placeholder="ZIPcode / PLZ"/>
+			</div>
+			<div class="form-group">
+				<span>ZIP</span>
+				<input class="form-control" type= "text" name= "zipcode" placeholder="ZIPcode / PLZ"/>
+			</div>
+			<div class="form-group">
+				<span>ZIP</span>
+				<input class="form-control" type= "text" name= "zipcode" placeholder="ZIPcode / PLZ"/>
+			</div>
+			<div class="form-group">
+				<span>ZIP</span>
+				<input class="form-control" type= "text" name= "zipcode" placeholder="ZIPcode / PLZ"/>
+			</div>
+			<div class="form-group">
+				<span>ZIP</span>
+				<input class="form-control" type= "text" name= "zipcode" placeholder="ZIPcode / PLZ"/>
+			</div>														
 			<div class="create-button-container">
 				<a href= "home.php"><button class="back-button" type="button">Back</button></a>
 				<button type="submit">Save</button>
