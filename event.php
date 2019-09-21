@@ -14,6 +14,7 @@ $user_details = mysqli_fetch_array($result, MYSQLI_ASSOC);
 $sql_events = "SELECT posts.*, concat(address, ' ', city, ' ', zipcode, ' ', country) as location FROM posts JOIN locations ON fk_location = locationID WHERE poi_type = 'event' OR poi_type = 'place' ORDER BY created";
 $result = $connect->query($sql_events);
 
+$connect->close(); 
 ?>
 
 <!DOCTYPE html>
@@ -103,5 +104,3 @@ if ($user_details['userpriv']==1){
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
-
-<?php $connect->close(); ?>

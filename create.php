@@ -25,7 +25,7 @@ if($result->num_rows > 0) {
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Home</title>
+	<title>Create</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/dashboard.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -34,12 +34,10 @@ if($result->num_rows > 0) {
 <body>
 
 <!-- TOP-NAVBAR section -->
-
+<?php include "admin_topnav.php"; ?>
 
 <?php 
 if ($user_details['userpriv'] == 1) {
-
-include "admin_topnav.php";
 
 echo 
 '<div class="page-content create-page">
