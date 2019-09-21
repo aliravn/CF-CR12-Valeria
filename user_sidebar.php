@@ -38,7 +38,7 @@ if(!isset($_SESSION['user'])) {
 		<li class="nav-item">
 			<a href="sarahmaps.php" class="nav-link text-dark font-italic">
 				<i class="fa fa-map sidebar-link fa-fw"></i>
-				Maps
+				Maps [n/a]
 			</a>
 		</li>
 	</ul>
@@ -48,13 +48,13 @@ if(!isset($_SESSION['user'])) {
 		<li class="nav-item">
 			<a href="#" class="nav-link text-dark font-italic">
 				<i class="fa fa-user-circle-o sidebar-link fa-fw"></i>
-				Change avatar
+				Avatar [n/a]
 			</a>
 		</li>
 		<li class="nav-item">
 			<a href="#" class="nav-link text-dark font-italic">
 				<i class="fa fa-unlock-alt sidebar-link fa-fw"></i>
-				Change password
+				Password [n/a]
 			</a>
 		</li>
 	</ul>
