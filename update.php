@@ -81,9 +81,24 @@ $connect->close();
 			<div class="form-group">
 				<span>Type of entry</span>
 				<select class="form-control" name= "poi_type">
-					<option value="restaurant">Restaurant</option>
-					<option value="event">Event</option>
-					<option value="place">Place</option>
+					<?php echo "<option value=".$data['poi_type']." selected>".$data['poi_type']." (selected)</option>";
+					if ($data['poi_type']=="restaurant") {
+						echo "
+						<option value='place'>PLACE</option>
+						<option value='event'>EVENT</option>
+						";
+					} else if ($data['poi_type']=='place') {
+						echo "
+						<option value='event'>EVENT</option>
+						<option value='restaurant'>RESTAURANT</option>
+						";
+					} else {
+						echo "
+						<option value='restaurant'>RESTAURANT</option>
+						<option value='place'>PLACE</option>
+						";	
+					}
+					?>
 				</select>
 			</div>
 			<div class="form-group">
