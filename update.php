@@ -68,7 +68,7 @@ $connect->close();
 			</div>
 			<div class="form-group">
 				<span>Teaser image:</span>
-				<input class="form-control" type= "URL" name= "image" value="<?php echo $data['image']; ?>" placeholder="image URL" />
+				<input class="form-control" type= "text" name= "image" value="<?php echo $data['image']; ?>" placeholder="image URL" />
 			</div>						
 			<div class="form-group">
 				<span>Homepage:</span>
