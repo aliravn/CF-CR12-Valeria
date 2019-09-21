@@ -102,8 +102,8 @@
   padding: .5rem;
 }
 
-.create-page {
-  display: flex;
+.create-post {
+    width: 40rem;
 }
 /* for toggle behavior */
 
