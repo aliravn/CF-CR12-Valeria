@@ -43,7 +43,7 @@
 		</li>
 		<p class="text-gray font-weight-bold text-uppercase px-3 mt-3 mb-0 small">Admin tools</p>
 		<li class="nav-item">
-			<a href="#" class="nav-link text-dark font-italic">
+			<a href="manage_users.php" class="nav-link text-dark font-italic">
 				<i class="fa fa-users sidebar-link fa-fw"></i>
 				Manage users [n/a]
 			</a>
