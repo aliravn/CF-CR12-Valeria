@@ -52,7 +52,7 @@ if ($user_details['userpriv']==1){
 							<img class='img-fluid img-thumbnail' src=".$row['image'].">";
 					if ($user_details['userpriv']==1){
 						echo "<div class='button-container'>
-						<a class='' href='p_update.php?id=" .$row['postID']."'><button class='manipulate-button' type='button'>Edit</button></a>
+						<a class='' href='update.php?id=" .$row['postID']."'><button class='manipulate-button' type='button'>Edit</button></a>
 						<a class='' href='a_delete.php?id=" .$row['postID']."'><button class='manipulate-button' type='button'>Delete</button></a>
 						</div>";
 					}	
