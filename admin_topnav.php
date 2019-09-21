@@ -15,7 +15,7 @@
 		<span class="navbar-toggler-icon"></span>
 	</button>
 	<div class="collapse navbar-collapse ml-5" id="navbarSupportedContent">
-		<ul class="navbar-nav ml-auto">
+<!-- 		<ul class="navbar-nav ml-auto">
 			<li class="nav-item active">
 				<a class="nav-link nav-text-color" href="#">LINK1<span class="sr-only">(current)</span></a>
 			</li>
@@ -31,12 +31,12 @@
 				<a class="dropdown-item" href="#">TBA</a>
 			</div>
 			</li>
-		</ul>
-<!--        <form class="form-inline my-2 my-lg-0">
+		</ul> -->
+       <form class="form-inline my-2 my-lg-0 ml-auto">
             <input class="form-control mr-sm-2" id="search-field" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-primary my-2 my-sm-0" id="search-button" type="submit">Search</button>
-        </form> -->
-		<ul class="navbar-nav">
+        </form>
+		<ul class="navbar-nav ml-auto">
 			<li class="nav-item">
 				<a href="logout.php?logout" class="nav-link nav-logout-color">Logout<i class="fa fa-sign-out nav-logout-color fa-fw"></i></a>
 			</li>
