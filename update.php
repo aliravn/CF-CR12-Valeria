@@ -53,7 +53,8 @@ $connect->close();
 <div class="page-content">
 	<div class="create-location create-post">
 		<h3>Update entry</h3>
-		<form action="a_create.php"  method="post">
+		<form action="a_update.php"  method="post">
+			<input type= "hidden" name= "postID" value="<?php echo $data['postID']; ?>" />
 			<div class="form-group">
 				<span>Title:</span>
 				<input class="form-control" type= "text" name= "name" value="<?php echo $data['name']; ?>" />
