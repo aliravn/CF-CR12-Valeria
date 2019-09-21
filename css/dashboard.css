@@ -50,7 +50,7 @@
 
 #map {
   margin: 5rem auto 0;
-  width: 40rem;
+  width: 50rem;
   height: 30rem;
 }
 
@@ -105,51 +105,7 @@
 .create-post {
     width: 40rem;
 }
-/* for toggle behavior */
 
-/* #sidebar.active {
-  margin-left: -17rem;
-}
-
-#content.active {
-  width: 100%;
-  margin: 0;
-} */
-
-/* @media (max-width: 768px) {
-  #sidebar {
-	margin-left: -17rem;
-  }
-  #sidebar.active {
-	margin-left: 0;
-  }
-  #content {
-	width: 100%;
-	margin: 0;
-  }
-  #content.active {
-	margin-left: 17rem;
-	width: calc(100% - 17rem);
-  }
-} */
-
-
-/*
-*
-* ==========================================
-* FOR DEMO PURPOSE
-* ==========================================
-*
-*/
-
-/* body {
-  background: #599fd9;
-  background: -webkit-linear-gradient(to right, #599fd9, #c2e59c);
-  background: linear-gradient(to right, #599fd9, #c2e59c);
-  min-height: 100vh;
-  overflow-x: hidden;
-}
- */
 .separator {
   margin: 3rem 0;
   border-bottom: 1px dashed #fff;
