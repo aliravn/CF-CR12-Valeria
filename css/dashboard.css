@@ -126,6 +126,20 @@
   color: #aaa;
 }
 
+table {
+  width: 100%;
+}
+
 tbody {
   font-size: .9rem;
+}
+
+.manage-user-page {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+#add-user-button {
+  margin: 1rem auto;
 }

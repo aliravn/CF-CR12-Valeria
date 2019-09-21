@@ -14,9 +14,13 @@ if(!isset($_SESSION['user'])) {
 		header("Location: home.php");
 		exit;
 	} else {
-		$sql_request = "SELECT * FROM users";
+		if ($_GET['id']) {
+		$id = $_GET['id'];
+		$sql_request = "SELECT * FROM users WHERE userID = '$id'";
 		$result = $connect->query($sql_request); 
+		$data = $result->fetch_assoc(); 
 	}
+}
 }
 $connect->close(); 
 ?>
@@ -24,7 +28,7 @@ $connect->close();
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Manage Users</title>
+	<title>Update</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/dashboard.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -39,55 +43,42 @@ $connect->close();
 <?php include "admin_sidebar.php"; ?>
 
 <!-- CONTENT section -->
-<div class="page-content manage-user-page">
-
-	<a href="p_create.php">
-		<button class="btn btn-success" id="add-user-button" type="button">Add user</button>
-	</a>
-
-	<table  border="1" cellspacing= "0" cellpadding="0" class="table">
-		<thead>
-			<tr>
-				<th>#</th>
-				<th>userID</th>
-				<th>username</th>
-				<th>useremail</th>
-				<th>userpass</th>
-				<th>userpic</th>
-				<th>regdate</th>
-				<th>userpriv</th>
-				<th>Actions</th>
-			</tr>
-		</thead>
-		<tbody>
-			<?php
-			$count = 1;
-			if($result->num_rows > 0) {
-				while($row = $result->fetch_assoc()) {
-					echo  
-					"<tr>
-						<td>$count</td>
-						<td>" .$row['userID']."</td>
-						<td>" .$row['username']."</td>
-						<td>" .$row['useremail']."</td>
-						<td>" .$row['userpass']."</td>
-						<td><img class='img-thumbnail img-fluid' width='100' src=" .$row['userpic']." alt='some image'/></td>
-						<td>" .$row['regdate']."</td>
-						<td>" .$row['userpriv']."</td>
-						<td class='manipulate-button-container'>
-						<a class='' href='update_user.php?id=" .$row['userID']."'><button class='user-manipulate-button' type='button'>Edit</button></a>
-						<a class='' href='#?id=" .$row['media_lib_ID']."'><button class='user-manipulate-button' type='button'>Delete</button></a>
-						</td>
-					</tr>";
-					$count++;
-				}
-			} else  {
-				echo  "<tr><td colspan='5'><center>No Data Avaliable</center></td></tr>";
-			}
-			?>
-		</tbody>
-	</table>
-
+<div class="page-content">
+	<div class="create-location create-post">
+		<h3>Update User</h3>
+		<form action="a_user_update.php"  method="post">
+			<div class="form-group">
+				<span>ID:</span>
+				<input class="form-control" type= "text" name= "postID" value="<?php echo $data['userID']; ?>" />
+			</div>			
+			
+			<div class="form-group">
+				<span>Title:</span>
+				<input class="form-control" type= "text" name= "name" value="<?php echo $data['username']; ?>" />
+			</div>
+			<div class="form-group">
+				<span>Email:</span>
+				<input class="form-control" type= "text" name= "useremail" value="<?php echo $data['useremail']; ?>" />
+			</div>				
+			<div class="form-group">
+				<span>Password:</span>
+				<input class="form-control" type= "text" name= "useremail" value="<?php echo $data['userpass']; ?>" />
+			</div>						
+			<div class="form-group">
+				<span>Userpic:</span>
+				<input class="form-control" type= "text" name= "userpic" value="<?php echo $data['userpic']; ?>" />
+			</div>
+			<div class="form-group">
+				<span>Admin/User</span>
+				<input class="form-control" type= "text" name= "userpriv" value="<?php echo $data['userpriv']; ?>" />
+			</div>
+			<div class="create-button-container">
+				<a href= "manage_users.php"><button class="back-button" type="button">Back</button></a>
+				<a href= "home.php"><button class="back-button" type="button">Home</button></a>
+				<button type="submit">Save</button>
+			</div>			
+		</form>
+	</div>
 </div>	
 <!-- ********************** JavaScript starts here **********************-->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
