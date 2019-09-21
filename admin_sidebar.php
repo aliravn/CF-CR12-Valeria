@@ -36,7 +36,7 @@
 			</a>
 		</li>
 		<li class="nav-item">
-			<a href="#" class="nav-link text-dark font-italic">
+			<a href="map.php" class="nav-link text-dark font-italic">
 				<i class="fa fa-map sidebar-link fa-fw"></i>
 				Maps [n/a]
 			</a>
