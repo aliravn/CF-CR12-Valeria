@@ -69,10 +69,10 @@ body {
   box-shadow: 3px 3px 3px black, -3px -3px 3px black;
 }
 
-.img-thumbnail {
+/* .img-thumbnail {
   border-radius: 0.5vw 2vw;
   background-color: #61605d;
-  box-shadow: 2px 2px 3px black, -2px -2px 3px black; }
+  box-shadow: 2px 2px 3px black, -2px -2px 3px black; } */
 
 .post-text {
   margin: 0;
@@ -148,4 +148,8 @@ tbody {
 
 #add-user-button {
   margin: 1rem auto;
+}
+
+#update {
+  height: 1.5rem;
 }
