@@ -2,7 +2,6 @@
 ob_start();
 session_start();
 
-// !!!!CHANGE LOCATION FOR HOME.php admin/user
 if(isset($_SESSION['user'])!="") { //if the user is loged in (user not empty)
 	header("Location: home.php"); // it redirects to home.php
 }
@@ -62,7 +61,7 @@ if (isset($_POST['btn-signup'])) {
 	$password = hash('sha256', $pass);
 
 	if(!$error) {
-		$query = "INSERT INTO users(username, userpass, useremail) VALUES('$name', '$password', '$email')";
+		$query = "INSERT INTO users(username, userpass, useremail) VALUES ('$name', '$password', '$email')";
 		$result = mysqli_query($connect, $query); 
 
 		if ($result) {
@@ -91,7 +90,7 @@ if (isset($_POST['btn-signup'])) {
 	<form class="login-form" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off" >
 		<h3>CREATE NEW ACCOUNT</h3>
 		<br>
-		<?php if ( isset($errMSG) ) { ?>
+		<?php if (isset($errMSG)) { ?>
 		<div  class="alert alert-<?php echo $errTyp ?> ">
 		<?php echo $errMSG; ?>
 		</div>
