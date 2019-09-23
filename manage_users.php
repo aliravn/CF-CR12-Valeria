@@ -76,7 +76,7 @@ $connect->close();
 						<td>" .$row['userpriv']."</td>
 						<td class='manipulate-button-container'>
 						<a class='' href='update_user.php?id=" .$row['userID']."'><button class='user-manipulate-button' type='button'>Edit</button></a>
-						<a class='' href='#?id=" .$row['media_lib_ID']."'><button class='user-manipulate-button' type='button'>Delete</button></a>
+						<a class='' href='a_delete_user.php?id=" .$row['userID']."'><button class='user-manipulate-button' type='button'>Delete</button></a>
 						</td>
 					</tr>";
 					$count++;
