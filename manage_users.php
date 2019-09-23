@@ -57,6 +57,7 @@ $connect->close();
 				<th>userpic</th>
 				<th>regdate</th>
 				<th>userpriv</th>
+				<th>status</th>
 				<th>Actions</th>
 			</tr>
 		</thead>
@@ -74,6 +75,7 @@ $connect->close();
 						<td>" .$row['userpic']."</td>
 						<td>" .$row['regdate']."</td>
 						<td>" .$row['userpriv']."</td>
+						<td>" .$row['userstatus']."</td>
 						<td class='manipulate-button-container'>
 						<a class='' href='update_user.php?id=" .$row['userID']."'><button class='user-manipulate-button' type='button'>Edit</button></a>
 						<a class='' href='a_delete_user.php?id=" .$row['userID']."'><button class='user-manipulate-button' type='button'>Delete</button></a>

@@ -73,7 +73,19 @@ $connect->close();
 			</div>
 			<div class="form-group">
 				<span>Admin/User</span>
-				<input class="form-control" id="user_priv"type= "text" name= "userpriv" value="<?php echo $data['userpriv']; ?>" />
+				<input class="form-control" id="user_priv" type= "text" name= "userpriv" value="<?php echo $data['userpriv']; ?>" />
+			</div>
+			<div class="form-group">
+				<span>Status</span>
+				<select class="form-control" id="user_status" name= "userstatus">
+					<?php echo "<option value=".$data['userstatus']." selected>".$data['userstatus']." (selected)</option>";
+					if ($data['userstatus']=="active") {
+						echo "<option value='blocked'>blocked</option>";
+					} else {
+						echo "<option value='active'>active</option>";	
+					}
+					?>
+				</select>
 			</div>
 			<div class="create-button-container">
 				<a href= "manage_users.php"><button class="back-button" type="button">Back</button></a>
@@ -94,7 +106,8 @@ $(document).ready(function() {
 		var new_userpass = $('#user_pass').val();	
 		var new_userpic = $('#user_pic').val();
 		var new_userpriv = $('#user_priv').val();
-		var array_to_send = {userid: user_id, username:new_username, useremail:new_useremail, userpass:new_userpass, userpic:new_userpic, userpriv:new_userpriv};
+		var new_userstatus = $('#user_status').val();		
+		var array_to_send = {userid: user_id, username:new_username, useremail:new_useremail, userpass:new_userpass, userpic:new_userpic, userpriv:new_userpriv, userstatus:new_userstatus};
 		$.ajax({
 			url:'aj_update_user.php',
 			method:"POST",
