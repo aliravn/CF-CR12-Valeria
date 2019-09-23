@@ -63,10 +63,10 @@ $connect->close();
 				<span>Email:</span>
 				<input class="form-control" id="user_mail" type= "text" name= "useremail" value="<?php echo $data['useremail']; ?>" />
 			</div>				
-<!-- 			<div class="form-group">
-				<span>Password:</span>
-				<input class="form-control" type= "text" name= "userpass" value="<?php echo $data['userpass']; ?>" />
-			</div>	 -->					
+			<div class="form-group">
+<!-- 				<span>Password:</span> -->
+				<input class="form-control" id="user_pass" type= "hidden" name= "user_pass" value="<?php echo $data['userpass']; ?>" />
+			</div>						
 			<div class="form-group">
 				<span>Userpic:</span>
 				<input class="form-control" id="user_pic" type= "text" name= "userpic" value="<?php echo $data['userpic']; ?>" />
@@ -91,9 +91,10 @@ $(document).ready(function() {
 		var user_id = $('#user_id').val();
 		var new_username = $('#user_name').val();
 		var new_useremail = $('#user_mail').val();
+		var new_userpass = $('#user_pass').val();	
 		var new_userpic = $('#user_pic').val();
 		var new_userpriv = $('#user_priv').val();
-		var array_to_send = {userid: user_id, username:new_username, useremail:new_useremail, userpic:new_userpic, userpriv:new_userpriv};
+		var array_to_send = {userid: user_id, username:new_username, useremail:new_useremail, userpass:new_userpass, userpic:new_userpic, userpriv:new_userpriv};
 		$.ajax({
 			url:'aj_update_user.php',
 			method:"POST",

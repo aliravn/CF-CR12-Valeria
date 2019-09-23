@@ -20,10 +20,11 @@ if(!isset($_SESSION['user'])) {
 			$id = mysqli_real_escape_string($connect, $data_from_form['userid']);
 			$new_username = mysqli_real_escape_string($connect, $data_from_form['username']);
 			$new_useremail = mysqli_real_escape_string($connect, $data_from_form['useremail']);
+			$new_userpass = mysqli_real_escape_string($connect, $data_from_form['userpass']);
 			$new_userpic = mysqli_real_escape_string($connect, $data_from_form['userpic']);
 			$new_userpriv = mysqli_real_escape_string($connect, $data_from_form['userpriv']);
 
-			$sql_request = "UPDATE users SET `username` = '$new_username', `useremail` = '$new_useremail', `userpic` = '$new_userpic', `userpriv` = '$new_userpriv' WHERE userID = '$id'";
+			$sql_request = "UPDATE users SET `username` = '$new_username', `useremail` = '$new_useremail', `userpass` = '$new_userpass', `userpic` = '$new_userpic', `userpriv` = '$new_userpriv' WHERE userID = '$id'";
 
 			if($connect->query($sql_request) === TRUE) {
 				echo TRUE;
