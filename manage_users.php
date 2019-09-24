@@ -41,8 +41,8 @@ $connect->close();
 <!-- CONTENT section -->
 <div class="page-content manage-user-page">
 
-	<a href="p_create.php">
-		<button class="btn btn-success" id="add-user-button" type="button">Add user</button>
+	<a href="#">
+		<button class="btn btn-success" id="add-user-button" type="button">Add user [n/a]</button>
 	</a>
 
 
