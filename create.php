@@ -65,7 +65,15 @@ $connect->close();
 				<span>Address</span>
 				<input class="form-control" type ="text" name= "address" placeholder="street, house no" />
 			</div>
-		
+			<div class="form-group">
+				<span>Latitude</span>
+				<input class="form-control" type ="text" name= "address" placeholder="latitude as 48.1234567" />
+			</div>
+			<div class="form-group">
+				<span>Longitude</span>
+				<input class="form-control" type ="text" name= "address" placeholder="longitude as 16.1234567" />
+			</div>
+
 			<div class="create-button-container">
 				<a href= "home.php"><button class="back-button" type="button">Back</button></a>
 				<button type="submit">Save</button>
