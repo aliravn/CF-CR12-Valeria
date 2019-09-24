@@ -18,8 +18,10 @@ if ($user_details['userpriv'] == 1) {
 		$loc_country = $_POST['country'];
 		$loc_city = $_POST['city'];
 		$loc_address = $_POST['address'];
+		$loc_lat = $_POST['lat'];
+		$loc_lng = $_POST['lng'];
 
-		$sql_request = "INSERT INTO locations (`zipcode`, `country`, `city`, `address`) VALUES ('$loc_zip', '$loc_country', '$loc_city', '$loc_address')";
+		$sql_request = "INSERT INTO locations (`zipcode`, `country`, `city`, `address`, `lat`, `lng`) VALUES ('$loc_zip', '$loc_country', '$loc_city', '$loc_address', '$loc_lat', '$loc_lng')";
 
 		if($connect->query($sql_request) === TRUE) {
 			echo "
