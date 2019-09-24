@@ -97,7 +97,7 @@ $connect->close();
 				<input class="form-control" type= "text" name= "homepage" placeholder="homepage"/>
 			</div>
 			<div class="form-group">
-				<span>Type (only for estaurant / place): </span>
+				<span>Type (only for restaurant / place): </span>
 				<input class="form-control" type= "text" name= "type" placeholder="cusine type / museum / gallery / etc"/>
 			</div>
 			<div class="form-group">
